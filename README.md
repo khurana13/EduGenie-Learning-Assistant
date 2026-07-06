@@ -41,7 +41,6 @@ EduGenie-Learning-Assistant/
 ├── requirements.txt
 ├── .env.example
 ├── README.md
-├── PROJECT_REPORT.md
 │
 ├── modules/
 │   ├── qna.py
