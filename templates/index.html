@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduGenie Learning Assistant</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="page">
+        <header>
+            <h1>EduGenie Learning Assistant</h1>
+            <p>A simple AI study helper for QnA, explanations, quizzes, summaries and learning paths.</p>
+        </header>
+
+        <main class="card">
+            <label for="task">Choose a task</label>
+            <select id="task">
+                <option value="qa">Question Answering</option>
+                <option value="explain">Concept Explanation</option>
+                <option value="quiz">Quiz Generation</option>
+                <option value="summarize">Text Summarization</option>
+                <option value="learn">Learning Path Recommendation</option>
+            </select>
+
+            <label for="userInput">Enter your question, topic or paragraph</label>
+            <textarea id="userInput" rows="8" placeholder="Example: Explain cloud computing in simple words"></textarea>
+
+            <div id="levelBox" class="hidden">
+                <label for="level">Your level</label>
+                <select id="level">
+                    <option>Beginner</option>
+                    <option>Intermediate</option>
+                    <option>Advanced</option>
+                </select>
+            </div>
+
+            <button onclick="sendRequest()">Generate</button>
+
+            <section class="output-box">
+                <h2>Output</h2>
+                <pre id="output">Your result will appear here...</pre>
+            </section>
+        </main>
+
+        <footer>
+            <p>Made with FastAPI, HTML, CSS and Gemini API.</p>
+        </footer>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
